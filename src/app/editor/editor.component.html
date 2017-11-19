@@ -1,0 +1,50 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xs-12">
+
+        <list-errors [errors]="errors"></list-errors>
+
+        <form [formGroup]="articleForm">
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <label>Student ID</label>              
+              <input class="form-control"
+                formControlName="title"
+                type="text"
+                placeholder="Student ID" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label>Pick up Location </label>
+               <select id="inputState"  formControlName="description"
+                type="text" class="form-control">
+        <option selected>HPC Gym</option>
+        <option>UT Tyler</option>
+        <option>Robert R. Muntz Library</option>
+      </select>
+              
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label>No. of Days</label>
+              <textarea class="form-control"
+                formControlName="body"  
+                placeholder="No. of days">
+              </textarea>
+            </fieldset>
+
+            
+
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">
+              Book a ride
+            </button>
+
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
